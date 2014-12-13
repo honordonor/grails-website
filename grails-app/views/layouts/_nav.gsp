@@ -12,7 +12,7 @@
 	</div>
 	<div id='navbar-collapse' class="collapse navbar-collapse pull-right">
 		<ul class="nav navbar-nav dropdown-main inner clearfix">
-			<li style='text-align:center'><g:link url="[controller:'homePage']" target='_self'><i class='glyphicon glyphicon-user'></i><div>Patient</div></g:link></li>
+			<li style='text-align:center'><a ui-sref="patient"><i class='glyphicon glyphicon-user'></i><div>Patient</div></a></li>
 			<li style='text-align:center'><g:link url="[controller:'homePage']" target='_self'><i class='glyphicon glyphicon-star-empty'></i><div>Donor</div></g:link></li>
 			<li style='text-align:center'><g:link url="[controller:'homePage']" target='_self'><i class='glyphicon glyphicon-question-sign'></i><div>Help</div></g:link></li>
 		</ul>

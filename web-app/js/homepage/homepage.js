@@ -1,5 +1,11 @@
 var homepageApp = angular.module('HomepageApp', [ 'ui.bootstrap', 'ui.router',
-		'ngFabForm', 'ngMessages', 'ngAnimate' ]);
+		'ngTouch', 'ngFabForm', 'ngMessages', 'ngAnimate' ]);
+
+homepageApp.config(function(ngFabFormProvider) {
+	ngFabFormProvider.extendConfig({
+		setAsteriskForRequiredLabel : true
+	});
+});
 
 homepageApp.config(function($stateProvider, $urlRouterProvider) {
 	//
@@ -10,20 +16,20 @@ homepageApp.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider.state('homepage', {
 		url : "/homepage",
 		templateUrl : "homepage.html",
-		controller : 'homepageCtrl'
+		controller : 'HomepageCtrl'
 
 	}).state('patient', {
 		url : "/patient",
 		templateUrl : "patientList.html",
-		controller : 'homepageCtrl'
-	}).state('patient.register', {
+		controller : 'PatientCtrl'
+	}).state('patientregister', {
 		url : "/patientregister",
 		templateUrl : "patientregister.html",
-		controller : 'homepageCtrl'
+		controller : 'PatientCtrl'
 	});
 });
 
-homepageApp.controller('homepageCtrl', function($scope) {
+homepageApp.controller('HomepageCtrl', function($scope) {
 
 	$scope.slides = [ {
 		image : "/images/common/image1.jpg",
@@ -36,4 +42,11 @@ homepageApp.controller('homepageCtrl', function($scope) {
 		label : "Image 3"
 	} ];
 
+});
+
+homepageApp.controller('PatientCtrl', function($scope) {
+
+	$scope.submitSearch = function() {
+
+	}
 });
