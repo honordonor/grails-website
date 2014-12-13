@@ -15,11 +15,14 @@ hibernate {
 environments {
 	development {
 		dataSource {
-			dbCreate = "create-drop"
-			url = "jdbc:mysql://localhost:3306/kineymatch"
-			username = 'dss'
-			password = 'dss'
-			logSql = false
+			dialect = org.hibernate.dialect.H2Dialect
+			driverClassName = "org.h2.Driver"
+			dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+			url = "jdbc:h2:mem:ddlDb;MVCC=TRUE;LOCK_TIMEOUT=10000;INIT=CREATE SCHEMA IF NOT EXISTS kineymatch"
+			username = "sa"
+			password = ""
+//			logSql = true
+			pooled = true
 		}
 	}
 	production {

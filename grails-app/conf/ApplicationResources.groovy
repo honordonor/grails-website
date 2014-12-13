@@ -35,6 +35,7 @@ modules = {
 		resource url: 'js/angular-1.2.27/angular-animate.min.js'
 		resource url: 'js/angular-1.2.27/angular-touch.min.js'
 		resource url: 'js/angular-1.2.27/angular-sanitize.min.js'
+		resource url: 'js/angular-1.3.5/angular-messages.min.js'
 	}
 	angularjs135 {
 		dependsOn 'jquery'
@@ -43,6 +44,7 @@ modules = {
 		resource url: 'js/angular-1.3.5/angular-animate.min.js'
 		resource url: 'js/angular-1.3.5/angular-touch.min.js'
 		resource url: 'js/angular-1.3.5/angular-sanitize.min.js'
+		resource url: 'js/angular-1.3.5/angular-messages.min.js'
 	}
 	
 	angularPluggin {
@@ -50,6 +52,8 @@ modules = {
 		resource url: 'js/vendor/angular-busy.min.js'
 		resource url: 'js/vendor/masks.js'
 		resource url: 'js/vendor/angular-ui-router.min.js'
+		resource url: 'js/vendor/ng-fab-form.min.js'
+		resource url:'/css/vendor/ng-fab-form.css',attrs:[type:'css'], disposition: 'head'
 	}
 	
 	angularBootstrap {
