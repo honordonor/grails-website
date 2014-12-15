@@ -54,6 +54,10 @@ modules = {
 		resource url: 'js/vendor/jquery.bind-first-0.2.3.min.js'
 		resource url: 'js/vendor/ng-fab-form.min.js'
 		resource url:'/css/vendor/ng-fab-form.css',attrs:[type:'css'], disposition: 'head'
+		
+		resource url: 'js/vendor/gridforms.js'
+		resource url:'/css/vendor/gridforms.css',attrs:[type:'css'], disposition: 'head'
+		
 	}
 	
 	angularBootstrap {
