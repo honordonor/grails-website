@@ -25,39 +25,46 @@ modules = {
 	}
 	
 	angularjs {
-		dependsOn 'angularjs135'
+		dependsOn 'angularjs13'
 	}
 
 	angularjs12 {
 		dependsOn 'jquery'
-		resource url: 'js/angular-1.2.27/angular.min.js'
-		resource url: 'js/angular-1.2.27/angular-route.min.js'
-		resource url: 'js/angular-1.2.27/angular-animate.min.js'
-		resource url: 'js/angular-1.2.27/angular-touch.min.js'
-		resource url: 'js/angular-1.2.27/angular-sanitize.min.js'
+		resource url: 'js/angular-1.2/angular.min.js'
+		resource url: 'js/angular-1.2/angular-route.min.js'
+		resource url: 'js/angular-1.2/angular-animate.min.js'
+		resource url: 'js/angular-1.2/angular-touch.min.js'
+		resource url: 'js/angular-1.2/angular-sanitize.min.js'
 	}
-	angularjs135 {
+	angularjs13 {
 		dependsOn 'jquery'
-		resource url: 'js/angular-1.3.5/angular.min.js'
-		resource url: 'js/angular-1.3.5/angular-route.min.js'
-		resource url: 'js/angular-1.3.5/angular-animate.min.js'
-		resource url: 'js/angular-1.3.5/angular-touch.min.js'
-		resource url: 'js/angular-1.3.5/angular-sanitize.min.js'
-		resource url: 'js/angular-1.3.5/angular-messages.min.js'
+		resource url: 'js/angular-1.3/angular.min.js'
+		resource url: 'js/angular-1.3/angular-route.min.js'
+		resource url: 'js/angular-1.3/angular-animate.min.js'
+		resource url: 'js/angular-1.3/angular-touch.min.js'
+		resource url: 'js/angular-1.3/angular-sanitize.min.js'
+		resource url: 'js/angular-1.3/angular-messages.min.js'
 	}
 	
 	angularPluggin {
-		dependsOn 'jquery','angularjs'
+		dependsOn 'jquery','angularjs', 'gridForms','fabForm'
 		resource url: 'js/vendor/angular-busy.min.js'
 		resource url: 'js/vendor/masks.js'
 		resource url: 'js/vendor/angular-ui-router.min.js'
+	}
+
+	fabForm {
+		dependsOn 'jquery','angularjs'
 		resource url: 'js/vendor/jquery.bind-first-0.2.3.min.js'
 		resource url: 'js/vendor/ng-fab-form.min.js'
 		resource url:'/css/vendor/ng-fab-form.css',attrs:[type:'css'], disposition: 'head'
 		
+	}
+
+	gridForms {
+		dependsOn 'jquery'
 		resource url: 'js/vendor/gridforms.js'
-		resource url:'/css/vendor/gridforms.css',attrs:[type:'css'], disposition: 'head'
-		
+		resource url:'/css/vendor/gridforms.css',attrs:[type:'css'], disposition: 'head'		
 	}
 	
 	angularBootstrap {
