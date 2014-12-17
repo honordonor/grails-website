@@ -11,6 +11,8 @@ class User {
 	boolean accountLocked
 	boolean passwordExpired
 
+	static hasOne = [donor: Donor, patient: Patient]
+	
 	static transients = ['springSecurityService']
 
 	static constraints = {

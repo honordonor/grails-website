@@ -26,7 +26,8 @@ class Patient {
 	Date dateCreated
 	Date lastUpdated
 	
-	PatientSetting patientSetting
+	static hasOne = [patientSetting : PatientSetting]
+	User user
 	
     static constraints = {
 		title nullable:true

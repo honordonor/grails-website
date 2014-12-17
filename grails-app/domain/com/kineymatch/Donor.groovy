@@ -35,10 +35,11 @@ class Donor {
 	String comments
 	Date dateCreated
 	Date lastUpdated
-	
-	DonorSetting donorSetting
-	
-    static constraints = {
+
+	static hasOne = [donorSetting : DonorSetting]
+	User user
+
+	static constraints = {
 		title nullable:true
 		firstName maxSize: 80
 		lastName maxSize: 80
@@ -64,5 +65,5 @@ class Donor {
 		tricareEligible nullable:true
 		personalBio nullable:true
 		comments nullable:true
-    }
+	}
 }

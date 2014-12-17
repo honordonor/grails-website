@@ -8,7 +8,7 @@
 				class="icon-bar"></span>
 		</button>
 		<g:link url="[controller:'homePage']" target='_self'
-			class='navbar-brand brand'>Kiney Donor</g:link>
+			class='navbar-brand brand'>Kidney Donor</g:link>
 	</div>
 	<div id='navbar-collapse' class="collapse navbar-collapse pull-right">
 		<ul class="nav navbar-nav dropdown-main inner clearfix">
